@@ -1,1 +1,97 @@
-// Header styles here 
+header {
+  padding: 14px 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  .nav_inner_wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    .brand_logo {
+      width: 238px;
+      height: auto;
+      display: block;
+    }
+    nav {
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          a {
+            @include font(18px, 1, 500, $color-black);
+            &:hover {
+              @media (min-width: $tablet-lg) {
+                color: $color-purple-heart;
+              }
+            }
+          }
+          & + li {
+            margin-left: 48px;
+          }
+        }
+      }
+    }
+    .right_nav_wrap {
+      display: flex;
+      align-items: center;
+      .phone_number {
+        display: flex;
+        align-items: flex-end;
+        @include font(16px, 1, 500, $color-black);
+        margin-right: 50px;
+        svg {
+          width: 26px;
+          height: auto;
+          display: block;
+          margin-right: 7px;
+          transition: 0.2s all ease-in-out;
+        }
+        &:hover {
+          svg {
+            animation: shake 0.8s forwards linear;
+            @keyframes shake {
+              0% {
+                transform: rotate(15deg);
+              }
+              20% {
+                transform: rotate(-15deg);
+              }
+              40% {
+                transform: rotate(15deg);
+              }
+              60% {
+                transform: rotate(-15deg);
+              }
+              80% {
+                transform: rotate(15deg);
+              }
+              100% {
+                transform: rotate(0deg);
+              }
+            }
+          }
+        }
+      }
+      .hamburger_menu {
+        cursor: pointer;
+        li {
+          width: 35px;
+          height: 3px;
+          border-radius: 10px;
+          background-color: $color-dove-grey;
+          display: block;
+          &:nth-child(2) {
+            width: 28px;
+            margin-left: auto;
+          }
+          & + li {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

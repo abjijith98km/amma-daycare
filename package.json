@@ -35,7 +35,8 @@
     "gulp-webp": "^4.0.1"
   },
   "dependencies": {
-    "gulp-uglify-es": "^2.0.0"
+    "gulp-uglify-es": "^2.0.0",
+    "node": "^14.16.1"
   },
   "bugs": {
     "url": "https://github.com/wowthemesnet/bootstrap-4-boilerplate/issues"

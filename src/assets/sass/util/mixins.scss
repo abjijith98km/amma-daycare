@@ -16,7 +16,7 @@
 }
 @mixin tablet-sm() {
   @media (max-width: $tablet-sm) {
-    @content; 
+    @content;
   }
 }
 
@@ -45,4 +45,10 @@
   @media (min-width: $value) {
     @content;
   }
+}
+@mixin font($size, $lheight, $weight, $color) {
+  font-size: $size;
+  line-height: $lheight;
+  font-weight: $weight;
+  color: $color;
 }

@@ -1,0 +1,130 @@
+.main_banner {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  .scroll_down_btn {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 50px;
+    right: 15%;
+    z-index: 5;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: 0.9s all ease-out;
+      left: 0;
+      top: 0;
+      border: 1px solid $color-purple-heart;
+      background-color: transparent;
+      box-shadow: 0 0 15px 1px rgba($color: $color-purple-heart, $alpha: 0.8);
+      border-radius: 50%;
+    }
+    svg {
+      width: 40px;
+      height: auto;
+      display: inline-block;
+    }
+    &:hover {
+      @media (min-width: $tablet-lg) {
+        &::after {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+  .floating_element {
+    width: 270px;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    z-index: 1;
+    &.float1 {
+      top: 10%;
+      left: 10%;
+    }
+    &.float2 {
+      top: 10%;
+      right: 8%;
+    }
+    &.float3 {
+      bottom: 5%;
+      left: 2%;
+    }
+    &.float4 {
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .filter_overlay {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    display: block;
+    backdrop-filter: blur(40px);
+    background-color: rgba($color: #fff, $alpha: 0.6);
+  }
+  .banner_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    h4 {
+      @include font(22px, 1.6, 500, $color-black);
+      text-align: center;
+      font-family: $base-font-family;
+      display: block;
+      width: 90%;
+      margin: 0 auto 56px;
+      span {
+        font-size: inherit;
+        font-weight: inherit;
+        color: $color-fountain-blue;
+        font-family: inherit;
+      }
+    }
+    h1 {
+      @include font(90px, 1.17, 700, $color-black);
+      text-align: center;
+      margin-bottom: 55px;
+      span {
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+        font-weight: inherit;
+        &:nth-of-type(1) {
+          color: $color-fountain-blue;
+        }
+        &:nth-of-type(2) {
+          color: $color-brink-pink;
+        }
+      }
+      img {
+        width: 250px;
+        height: 140px;
+        object-fit: contain;
+        object-position: center;
+        &:nth-of-type(1) {
+          height: 180px;
+          object-position: bottom center;
+          margin-top: -70px;
+          width: 170px;
+        }
+        &:nth-of-type(2) {
+          height: 120px;
+          object-position: bottom center;
+        }
+      }
+    }
+    .cta + .cta {
+      margin-left: 50px;
+    }
+  }
+}

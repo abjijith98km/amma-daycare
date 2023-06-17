@@ -17,8 +17,8 @@
  * Base font family
 */
 
-$content-font-family: 'Gotham Book', sans-serif;;
-$base-font-family: 'Gotham', sans-serif;
+$content-font-family: "Merriweather", sans-serif;
+$base-font-family: "Montserrat", sans-serif;
 
 /*
  * Base font sizes
@@ -45,15 +45,24 @@ $base-line-height: 1.5 !default;
 */
 
 $color-white: #ffffff !default;
-$color-black: #000000 !default; 
-h1,h2,h3,h4,h5,h6{
-    margin: 0;
+$color-black: #000000 !default;
+$color-purple-heart: #a629c2;
+$color-dove-grey: #707070;
+$color-fountain-blue: #4bb9bf;
+$color-brink-pink: #fc6d91;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 // Breakpoints
 $desktop-lg: 1440px;
 $desktop-sm: 1365px;
-$tablet-lg: 1200px; 
+$tablet-lg: 1200px;
 $tablet-sm: 990px;
 $mobile-lg: 720px;
 $mobile-sm: 580px;

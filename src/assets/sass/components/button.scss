@@ -1,1 +1,25 @@
-// Buttons styles here 
+.cta {
+  display: inline-block;
+  padding: 18px 40px;
+  background-color: $color-purple-heart;
+  border-radius: 50px;
+  border: 2px solid $color-purple-heart;
+  @include font(22px, 1, 500, $color-white);
+  transition: 0.2s all ease-in-out;
+  &:hover {
+    @media (min-width: $tablet-lg) {
+      background-color: #9431ab;
+      color: $color-white;
+    }
+  }
+  &.cta_border {
+    background-color: transparent;
+    color: $color-purple-heart;
+    &:hover {
+      @media (min-width: $tablet-lg) {
+        background-color: $color-purple-heart;
+        color: $color-white;
+      }
+    }
+  }
+}
