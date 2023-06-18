@@ -1,0 +1,103 @@
+footer {
+  background-color: $color-black;
+  padding: 74px 0 70px;
+  .top_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 55px;
+    border-bottom: 1px solid $color-white;
+    margin-bottom: 62px;
+    @media (max-width: $tablet-lg) {
+      flex-wrap: wrap;
+    }
+    .logo_wrap {
+      display: inline-block;
+      width: 260px;
+      height: auto;
+      @media (max-width: $mobile-lg) {
+        width: 220px;
+        margin: 0 auto 30px;
+        display: block;
+      }
+    }
+    .social_medi_links {
+      display: flex;
+      align-items: center;
+      @media (max-width: $mobile-lg) {
+        width: 100%;
+        justify-content: center;
+      }
+      li {
+        a {
+          width: auto;
+          height: 23px;
+        }
+        & + li {
+          margin-left: 14px;
+        }
+      }
+    }
+    nav {
+      @media (max-width: $tablet-lg) {
+        order: 3;
+        width: 100%;
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        @media (max-width: $mobile-lg) {
+          flex-flow: column;
+        }
+        li {
+          a {
+            @include font(18px, 1.2, 400, $color-white);
+          }
+          & + li {
+            @media (min-width: $mobile-lg) {
+              margin-left: 34px;
+            }
+            @media (max-width: $mobile-lg) {
+              margin-top: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottom_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $mobile-lg) {
+      flex-flow: column;
+    }
+    p {
+      @include font(12px, 1.1, 400, $color-white);
+      margin: 0;
+      @media (max-width: $mobile-lg) {
+        margin-bottom: 15px;
+      }
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      margin-left: 43px;
+      @media (max-width: $mobile-lg) {
+        margin-left: 0px;
+      }
+      li {
+        a {
+          @include font(12px, 1.1, 400, $color-white);
+          text-decoration: underline;
+        }
+        & + li {
+          margin-left: 43px;
+        }
+      }
+    }
+  }
+}

@@ -1,13 +1,13 @@
 <partial src="head.html" page="homepage" title="Homepage - Website"></partial>
 <partial src="header.html"></partial>
-<section class="main_banner position-relative">
+<section class="main_banner position-relative" id="top">
   <span class="floating_element float1">
     <img src="./assets/img/icons/1.svg" alt="">
   </span>
-  <span class="floating_element float2">
+  <span class="floating_element float3">
     <img src="./assets/img/icons/2.svg" alt="">
   </span>
-  <span class="floating_element float3">
+  <span class="floating_element float2">
     <img src="./assets/img/icons/3.svg" alt="">
   </span>
   <span class="floating_element float4">
@@ -24,12 +24,12 @@
         and
         experienced educators provide a solid foundation for growth and exploration. Join us and watch your child
         flourish!</h4>
-      <div class="d-flex align-items-center justify-content-center">
+      <div class="d-flex btn_wrapper align-items-center justify-content-center">
         <a href="#" class="cta cta_primary">Know more</a>
         <a href="#" class="cta cta_primary cta_border">Get in touch</a>
       </div>
     </div>
-    <a href="#" class="scroll_down_btn">
+    <a href="#intro" class="scroll_down_btn">
       <svg xmlns="http://www.w3.org/2000/svg" width="40.942" height="46.787" viewBox="0 0 40.942 46.787">
         <path id="arrow-down-short"
           d="M24.97,4a2.924,2.924,0,0,1,2.924,2.924V40.8L40.443,28.245a2.928,2.928,0,1,1,4.14,4.14L27.04,49.928a2.924,2.924,0,0,1-4.14,0L5.357,32.385a2.928,2.928,0,1,1,4.14-4.14L22.046,40.8V6.924A2.924,2.924,0,0,1,24.97,4Z"
@@ -39,25 +39,45 @@
   </div>
 </section>
 
-<section class="about_intro">
+<section class="about_intro" id="intro">
   <div class="container">
     <div class="video_playr">
-      <video width="100%" height="auto" controls>
-        <source src="./uploads/home/vid.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <!-- <iframe src="https://player.vimeo.com/video/94119991?h=e55d78befe" width="640" height="291" frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
+      <div class="thumbnail_holder">
+        <img src="./uploads/home/vid.jpg" alt="">
+        <button class="play_btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26.842" height="30.2" viewBox="0 0 26.842 30.2">
+            <path id="btn"
+              d="M29.486,20.937,8.137,33.325A2.747,2.747,0,0,1,4,30.986V6.212A2.745,2.745,0,0,1,8.137,3.877L29.486,16.264a2.691,2.691,0,0,1,0,4.674Z"
+              transform="translate(-4 -3.5)" />
+          </svg>
+        </button>
+      </div>
+      <div class="video-wrap">
+        <div class="close_btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+            viewBox="0 0 16 16">
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+          </svg>
+        </div>
+
+        <video width="100%" height="auto" controls id="fvideo">
+          <source src="./uploads/home/vid.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
 
     </div>
     <div class="row">
       <div class="col-12 col-lg-6">
         <h3><span>About Us:</span> Unveiling Our Story and Purpose</h3>
-        <a href="#" class="cta cta_primary">Learn more</a>
+        <a href="#" class="cta cta_primary mb-5">Learn more</a>
 
       </div>
       <div class="col-12 col-lg-6">
-        <p>Welcome to AMMA daycare, a trusted haven for your little ones. With a passion for nurturing and a commitment
+        <p>Welcome to <span>AMMA daycare</span>, a trusted haven for your little ones. With a passion for nurturing and
+          a commitment
           to excellence, we provide a safe and stimulating environment where children can learn, grow, and thrive. Our
           team of dedicated caregivers and educators is trained to provide personalized care, fostering each child's
           unique development while promoting social, emotional, and intellectual growth.
@@ -72,4 +92,422 @@
   </div>
 </section>
 
+<section class="our_services_section position-relative" id="our_services">
+  <div class="parallax_content">
+    <img src="./uploads/home/cube.svg" alt="square box with color">
+  </div>
+  <div class="container">
+    <h2 class="main_title">Our services</h2>
+    <h5 class="sub_title">Comprehensive Solutions Tailored to Your Needs: Unlocking Success Through Our Diverse Range of
+      Services</h5>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service_card">
+          <img src="./uploads/home/s1.svg" alt="">
+          <h4>After school</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac ante vitae velit blandit cursus.</p>
+          <button class="open_popup">Read More</button>
+          <div class="popup_description">
+            <div class="popup_header">
+              <h3>After school</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+              </svg>
+            </div>
+            <div class="popup_body">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo.consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo.consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo.consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo.consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service_card">
+          <img src="./uploads/home/s2.svg" alt="">
+          <h4>Day care</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac ante vitae velit blandit cursus.</p>
+          <button class="open_popup">Read More</button>
+          <div class="popup_description">
+            <div class="popup_header">
+              <h3>Day care</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+              </svg>
+            </div>
+            <div class="popup_body">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo.consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo.consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo.consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo.consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service_card">
+          <img src="./uploads/home/s3.svg" alt="">
+          <h4>lkg / ukg</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac ante vitae velit blandit cursus.</p>
+          <button class="open_popup">Read More</button>
+          <div class="popup_description">
+            <div class="popup_header">
+              <h3>lkg / ukg</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+              </svg>
+            </div>
+            <div class="popup_body">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo.consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo.consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo.consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo.consectetur adipisicing elit. Earum ipsa ab consequatur, iusto fugit sit
+                dignissimos error dolorum, recusandae aliquid ut eos totam! Voluptatum tempore similique eligendi,
+                facere quas explicabo</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq_section position-relative" id="faq">
+  <div class="parallax_content">
+    <img src="./uploads/home/semi.svg" alt="square box with color">
+  </div>
+  <div class="container">
+    <h2 class="main_title">Faq's</h2>
+    <h5 class="sub_title">Comprehensive Solutions Tailored to Your Needs: Unlocking Success Through Our Diverse Range of
+      Services</h5>
+
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+            aria-controls="panelsStayOpen-collapseOne">
+            1. What are your operating hours? <svg xmlns="http://www.w3.org/2000/svg" width="31.531" height="31.531"
+              viewBox="0 0 31.531 31.531">
+              <path id="plus-lg"
+                d="M17.766,2A1.314,1.314,0,0,1,19.08,3.314V16.452H32.218a1.314,1.314,0,1,1,0,2.628H19.08V32.218a1.314,1.314,0,0,1-2.628,0V19.08H3.314a1.314,1.314,0,0,1,0-2.628H16.452V3.314A1.314,1.314,0,0,1,17.766,2Z"
+                transform="translate(-2 -2)" fill="#a629c2" fill-rule="evenodd" />
+            </svg>
+
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+          aria-labelledby="panelsStayOpen-headingOne">
+          <div class="accordion-body">
+            <p>We are open from Monday to Friday, from 7:30 AM to 6:00 PM.</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseTwo">
+            2. What is the age range of children you accept? <svg xmlns="http://www.w3.org/2000/svg" width="31.531"
+              height="31.531" viewBox="0 0 31.531 31.531">
+              <path id="plus-lg"
+                d="M17.766,2A1.314,1.314,0,0,1,19.08,3.314V16.452H32.218a1.314,1.314,0,1,1,0,2.628H19.08V32.218a1.314,1.314,0,0,1-2.628,0V19.08H3.314a1.314,1.314,0,0,1,0-2.628H16.452V3.314A1.314,1.314,0,0,1,17.766,2Z"
+                transform="translate(-2 -2)" fill="#a629c2" fill-rule="evenodd" />
+            </svg>
+
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingTwo">
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
+            plugin adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree">
+            3. How do you ensure the safety and security of the children? <svg xmlns="http://www.w3.org/2000/svg"
+              width="31.531" height="31.531" viewBox="0 0 31.531 31.531">
+              <path id="plus-lg"
+                d="M17.766,2A1.314,1.314,0,0,1,19.08,3.314V16.452H32.218a1.314,1.314,0,1,1,0,2.628H19.08V32.218a1.314,1.314,0,0,1-2.628,0V19.08H3.314a1.314,1.314,0,0,1,0-2.628H16.452V3.314A1.314,1.314,0,0,1,17.766,2Z"
+                transform="translate(-2 -2)" fill="#a629c2" fill-rule="evenodd" />
+            </svg>
+
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingThree">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
+            adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseFOur" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseFOur">
+            4. What qualifications and experience do your staff members have? <svg xmlns="http://www.w3.org/2000/svg"
+              width="31.531" height="31.531" viewBox="0 0 31.531 31.531">
+              <path id="plus-lg"
+                d="M17.766,2A1.314,1.314,0,0,1,19.08,3.314V16.452H32.218a1.314,1.314,0,1,1,0,2.628H19.08V32.218a1.314,1.314,0,0,1-2.628,0V19.08H3.314a1.314,1.314,0,0,1,0-2.628H16.452V3.314A1.314,1.314,0,0,1,17.766,2Z"
+                transform="translate(-2 -2)" fill="#a629c2" fill-rule="evenodd" />
+            </svg>
+
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFOur" class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingFour">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
+            adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseFive">
+            5. What is your curriculum or approach to early childhood education? <svg xmlns="http://www.w3.org/2000/svg"
+              width="31.531" height="31.531" viewBox="0 0 31.531 31.531">
+              <path id="plus-lg"
+                d="M17.766,2A1.314,1.314,0,0,1,19.08,3.314V16.452H32.218a1.314,1.314,0,1,1,0,2.628H19.08V32.218a1.314,1.314,0,0,1-2.628,0V19.08H3.314a1.314,1.314,0,0,1,0-2.628H16.452V3.314A1.314,1.314,0,0,1,17.766,2Z"
+                transform="translate(-2 -2)" fill="#a629c2" fill-rule="evenodd" />
+            </svg>
+
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingFive">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
+            adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseSix">
+            6. What meals and snacks are provided? Can you accommodate dietary restrictions?
+            <svg xmlns="http://www.w3.org/2000/svg" width="31.531" height="31.531" viewBox="0 0 31.531 31.531">
+              <path id="plus-lg"
+                d="M17.766,2A1.314,1.314,0,0,1,19.08,3.314V16.452H32.218a1.314,1.314,0,1,1,0,2.628H19.08V32.218a1.314,1.314,0,0,1-2.628,0V19.08H3.314a1.314,1.314,0,0,1,0-2.628H16.452V3.314A1.314,1.314,0,0,1,17.766,2Z"
+                transform="translate(-2 -2)" fill="#a629c2" fill-rule="evenodd" />
+            </svg>
+
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingSix">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
+            adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseSeven">
+            7. How do you handle naptime and rest periods? <svg xmlns="http://www.w3.org/2000/svg" width="31.531"
+              height="31.531" viewBox="0 0 31.531 31.531">
+              <path id="plus-lg"
+                d="M17.766,2A1.314,1.314,0,0,1,19.08,3.314V16.452H32.218a1.314,1.314,0,1,1,0,2.628H19.08V32.218a1.314,1.314,0,0,1-2.628,0V19.08H3.314a1.314,1.314,0,0,1,0-2.628H16.452V3.314A1.314,1.314,0,0,1,17.766,2Z"
+                transform="translate(-2 -2)" fill="#a629c2" fill-rule="evenodd" />
+            </svg>
+
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingSeven">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
+            adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="get_in_touch position-relative" id="contact">
+  <div class="parallax_content">
+    <img src="./uploads/home/triangle.svg" alt="square box with color">
+  </div>
+  <div class="container">
+    <h2 class="main_title">Get in touch</h2>
+    <h5 class="sub_title">Give us a holla , and we'll get back to you</h5>
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <div class="contact_info">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19.265" height="25.687" viewBox="0 0 19.265 25.687">
+            <path id="geo-alt-fill"
+              d="M11.633,25.687s9.633-9.128,9.633-16.054A9.633,9.633,0,1,0,2,9.633C2,16.558,11.633,25.687,11.633,25.687Zm0-11.238a4.816,4.816,0,1,1,4.816-4.816A4.816,4.816,0,0,1,11.633,14.449Z"
+              transform="translate(-2)" fill="#a629c2" />
+          </svg>
+          <div class="body">
+            <h5>Location:-</h5>
+            <address>Kairali street road, Mathrubhumi
+              jn kaloor,
+              Ernakulam, Kerala 682017
+              India,</address>
+          </div>
+        </div>
+        <div class="contact_info">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28.379" height="21.284" viewBox="0 0 28.379 21.284">
+            <path id="person-lines-fill"
+              d="M10.642,12.642A5.321,5.321,0,1,0,5.321,7.321,5.321,5.321,0,0,0,10.642,12.642ZM1.774,23.284A1.737,1.737,0,0,1,0,21.51c0-1.774,1.774-7.095,10.642-7.095a19.519,19.519,0,0,1,3.448.313c5.824.923,7.194,5.223,7.194,6.782a1.737,1.737,0,0,1-1.774,1.774ZM19.51,4.66a.887.887,0,0,1,.887-.887h7.095a.887.887,0,1,1,0,1.774H20.4A.887.887,0,0,1,19.51,4.66ZM20.4,9.095a.887.887,0,0,0,0,1.774h7.095a.887.887,0,1,0,0-1.774Zm3.547,5.321a.887.887,0,0,0,0,1.774h3.547a.887.887,0,1,0,0-1.774Zm0,5.321a.887.887,0,0,0,0,1.774h3.547a.887.887,0,1,0,0-1.774Z"
+              transform="translate(0 -2)" fill="#a629c2" />
+          </svg>
+
+          <div class="body">
+            <h5>Reach out:-</h5>
+            <address>
+              <span>Mob:</span> +91 735 654 5354, +91 944 610 8809
+              <span>E-mail:</span> amma.kindergarten@gmail.com
+            </address>
+          </div>
+        </div>
+        <div class="contact_info">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21.012" height="24.014" viewBox="0 0 21.012 24.014">
+            <path id="stopwatch-fill"
+              d="M9.255,0a.75.75,0,0,0,0,1.5h.75V3.107a10.509,10.509,0,1,0,9.441,3.521l.02-.018L20,6.079l.53.531a.75.75,0,1,0,1.061-1.061L19.465,3.425A.75.75,0,1,0,18.4,4.486l.531.531-.531.531-.018.018a10.466,10.466,0,0,0-5.379-2.458V1.5h.75a.75.75,0,1,0,0-1.5Zm3,8.4v5.1a.75.75,0,0,1-.75.75H6.253a.75.75,0,1,1,0-1.5h4.5V8.4a.75.75,0,0,1,1.5,0Z"
+              transform="translate(-1)" fill="#a629c2" />
+          </svg>
+
+
+          <div class="body">
+            <h5>working Hours:-</h5>
+            <address>
+              <span>Mon - sat:</span>7:30 am to 9:00 pm
+            </address>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="form_wrap">
+          <form action="">
+            <fieldset>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Name">
+            </fieldset>
+            <fieldset>
+              <label for="emailid">Email</label>
+              <input type="email" id="emailid" name="emailid" placeholder="Email">
+            </fieldset>
+            <fieldset>
+              <label for="mobnumber">Mobile</label>
+              <input type="tel" id="mobnumber" name="mobnumber" placeholder="Mobile">
+            </fieldset>
+            <fieldset>
+              <label for="message">Message</label>
+              <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+              <div class="verification_wrap mt-2">
+  
+                <input type="checkbox" form="emails" name="emails"  id="emails">
+                <label for="emails">Also send me updates via mail</label>
+              </div>
+            </fieldset>
+   
+            <fieldset>
+              <input type="submit" value="send">
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="newsletter">
+  <div class="container">
+    <div class="email_newsletter_block position-relative">
+      <img src="./uploads/home/ctabg.jpg" alt="">
+      <div class="inner_wrap">
+        <h3>Get The Latest Of Our Updates</h3>
+        <form action="">
+          <fieldset>
+            <input type="email" placeholder="Email">
+            <input type="submit" value="SIGN UP">
+          </fieldset>
+          <p>By clicking sign up you agree with our <a href="#">terms and conditions</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 <partial src="footer.html"></partial>

@@ -1,0 +1,35 @@
+.main_title {
+  @include font(42px, 1.35, 700, $color-purple-heart);
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  @media (max-width: $mobile-lg) {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  &::after {
+    content: "";
+    width: 104px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: $color-purple-heart;
+    left: 50%;
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    transform: translateX(-50%);
+  }
+}
+.sub_title {
+  @include font(22px, 1.36, 600, $color-black);
+  text-align: center;
+  display: block;
+  max-width: 680px;
+  margin: 0 auto 70px;
+  font-family: $base-font-family;
+  @media (max-width: $mobile-lg) {
+    font-size: 16px;
+    margin: 0 auto 30px;
+  }
+}

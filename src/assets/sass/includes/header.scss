@@ -1,10 +1,12 @@
 header {
   padding: 14px 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 100;
+  background-color: transparent;
+  transition: 0.2s all ease-in-out;
   .nav_inner_wrapper {
     display: flex;
     align-items: center;
@@ -14,14 +16,71 @@ header {
       width: 238px;
       height: auto;
       display: block;
+      @media (max-width: $tablet-sm) {
+        width: 200px;
+      }
+      @media (max-width: $mobile-lg) {
+        width: 140px;
+      }
     }
     nav {
+      .social_media_icons {
+        display: none;
+        @media (max-width: $tablet-lg) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-flow: row;
+        }
+        li {
+          margin-top: 0;
+          & + li {
+            margin-left: 20px;
+          }
+          a {
+            width: auto;
+            height: 40px;
+            svg {
+              path {
+                fill: $color-purple-heart;
+              }
+            }
+          }
+        }
+      }
+      @media (max-width: $tablet-lg) {
+        position: fixed;
+        top: 0;
+        transition: 0.3s all ease-in-out;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background-color: $color-white;
+        padding: 110px 20px 50px;
+        z-index: -1;
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: column;
+        @media (max-width: $mobile-lg) {
+          padding: 100px 20px 15px;
+        }
+      }
       ul {
         display: flex;
         align-items: center;
+        @media (max-width: $tablet-lg) {
+          flex-flow: column;
+        }
         li {
           a {
             @include font(18px, 1, 500, $color-black);
+            @media (max-width: $tablet-lg) {
+              font-size: 36px;
+            }
+            @media (max-width: $mobile-lg) {
+              font-size: 20px;
+            }
             &:hover {
               @media (min-width: $tablet-lg) {
                 color: $color-purple-heart;
@@ -29,7 +88,15 @@ header {
             }
           }
           & + li {
-            margin-left: 48px;
+            @media (min-width: $tablet-lg) {
+              margin-left: 48px;
+            }
+            @media (max-width: $tablet-lg) {
+              margin-top: 30px;
+            }
+            @media (max-width: $mobile-lg) {
+              margin-top: 20px;
+            }
           }
         }
       }
@@ -42,6 +109,9 @@ header {
         align-items: flex-end;
         @include font(16px, 1, 500, $color-black);
         margin-right: 50px;
+        @media (max-width: $mobile-lg) {
+          display: none;
+        }
         svg {
           width: 26px;
           height: auto;
@@ -89,9 +159,110 @@ header {
           }
           & + li {
             margin-top: 10px;
+            @media (max-width: $mobile-lg) {
+              margin-top: 7px;
+            }
           }
         }
       }
+    }
+  }
+}
+.header_sticky header {
+  background-color: $color-white;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -650px;
+  left: auto;
+  z-index: 102;
+  background-color: $color-white;
+  height: 100vh;
+  width: 650px;
+  padding: 75px 50px;
+  display: flex;
+  transition: 0.5s all ease-in-out;
+  flex-flow: column;
+  justify-content: space-between;
+  .close_bt {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .topwrap {
+    .logo_wrap {
+      width: 150px;
+      height: auto;
+      margin: 0 auto 55px;
+    }
+    h3 {
+      @include font(40px, 1.4, 700, $color-purple-heart);
+      margin-bottom: 18px;
+      text-transform: capitalize;
+      font-family: $base-font-family;
+    }
+    p {
+      @include font(20px, 1.5, 400, $color-black);
+    }
+  }
+  .row {
+    margin: 0 -35px;
+    & > div {
+      padding: 0px 35px 0;
+      address {
+        padding-top: 20px;
+        border-top: 1px solid #000;
+        @include font(20px, 1.5, 600, $color-black);
+        font-family: $base-font-family;
+      }
+      ul {
+        border-top: 1px solid #000;
+        padding-top: 20px;
+        li {
+          a {
+            @include font(20px, 1.5, 600, $color-black);
+            font-family: $base-font-family;
+          }
+          & + li {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+.nav_bar_open {
+  .bg_overlay_blade {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .sidebar {
+    @media (min-width: $tablet-lg) {
+      right: 0;
+    }
+  }
+}
+.nav_bar_open {
+  .bg_overlay_blade {
+    @media (max-width: $tablet-lg) {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  header .nav_inner_wrapper nav {
+    @media (max-width: $tablet-lg) {
+      display: flex;
     }
   }
 }

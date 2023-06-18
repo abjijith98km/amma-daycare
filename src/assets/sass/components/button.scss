@@ -6,6 +6,14 @@
   border: 2px solid $color-purple-heart;
   @include font(22px, 1, 500, $color-white);
   transition: 0.2s all ease-in-out;
+  @media (max-width:$desktop-lg) {
+    font-size: 19px;
+    padding: 15px 30px;
+  }
+  @media (max-width:$mobile-lg) {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
   &:hover {
     @media (min-width: $tablet-lg) {
       background-color: #9431ab;
