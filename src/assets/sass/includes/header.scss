@@ -180,7 +180,6 @@ header {
   background-color: $color-white;
   height: 100vh;
   width: 650px;
-  padding: 75px 50px;
   display: flex;
   transition: 0.5s all ease-in-out;
   flex-flow: column;
@@ -200,22 +199,35 @@ header {
   }
   .topwrap {
     .logo_wrap {
-      width: 150px;
       height: auto;
-      margin: 0 auto 55px;
+      width: 100%;
+      padding: 75px 50px 50px;
+      background-color: #d8e3e8;
+      img {
+        margin: 0 auto;
+        width: 150px;
+        height: auto;
+        display: block;
+      }
     }
-    h3 {
-      @include font(40px, 1.4, 700, $color-purple-heart);
-      margin-bottom: 18px;
-      text-transform: capitalize;
-      font-family: $base-font-family;
-    }
-    p {
-      @include font(20px, 1.5, 400, $color-black);
+    .inner_wrap {
+      padding: 45px 50px;
+
+      h3 {
+        @include font(40px, 1.4, 700, $color-purple-heart);
+        margin-bottom: 18px;
+        text-transform: capitalize;
+        font-family: $base-font-family;
+      }
+      p {
+        @include font(20px, 1.5, 400, $color-black);
+      }
     }
   }
   .row {
     margin: 0 -35px;
+    padding: 75px 50px;
+
     & > div {
       padding: 0px 35px 0;
       address {

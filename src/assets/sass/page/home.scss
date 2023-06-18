@@ -546,6 +546,7 @@
     .accordion-item {
       border: 0;
       border-bottom: 1px solid $color-black;
+      background-color: transparent;
       .accordion-button {
         background-color: transparent;
         box-shadow: none;
