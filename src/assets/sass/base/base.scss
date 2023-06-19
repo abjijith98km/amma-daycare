@@ -6,6 +6,14 @@ html {
 * {
   outline: 0;
   user-select: none;
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 8px;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+  }
   &,
   &:before,
   &:after {
@@ -75,9 +83,8 @@ address {
 }
 .container-fluid {
   padding: 0 38px;
-  @media (max-width:$mobile-lg) {
-  padding: 0 15px;
-    
+  @media (max-width: $mobile-lg) {
+    padding: 0 15px;
   }
 }
 @include mobile-landscape {

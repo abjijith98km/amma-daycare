@@ -179,7 +179,9 @@ header {
   z-index: 102;
   background-color: $color-white;
   height: 100vh;
+  overflow-y: auto;
   width: 650px;
+  overflow-x: hidden;
   display: flex;
   transition: 0.5s all ease-in-out;
   flex-flow: column;
