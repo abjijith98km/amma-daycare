@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  AOS.init();
   let video = document.getElementById("fvideo");
   $(".video_playr .play_btn").click(function () {
     $("body").addClass("video_playback_open");
@@ -65,6 +64,40 @@ $(document).ready(function () {
     window.scrollTo({
       top: top - 0,
       behavior: "smooth",
+    });
+  }
+  let isFirstTry = localStorage.getItem("FIRST_ENTRY");
+
+  if ($(".preloading_blacde").length > 0) {
+    if (isFirstTry) {
+      $(".preloading_blacde").addClass("d-none");
+    }
+    if (isFirstTry == null) {
+      localStorage.setItem("FIRST_ENTRY", true);
+    }
+    setTimeout(() => {
+      $(".preloading_blacde").addClass("loading");
+    }, 1000);
+    setTimeout(() => {
+      $(".preloading_blacde").addClass("loaded");
+    }, 3500);
+  }
+  if ($(".main_banner").length > 0 && window.screen.width > 1200) {
+    $(".main_banner").mousemove(function (e) {
+      let x = e.pageX,
+        y = e.pageY;
+      $(".main_banner .float1").css({
+        transform: `translate(${x / 30}px,${y / 30}px)`,
+      });
+      $(".main_banner .float2").css({
+        transform: `translate(${x / 30}px,${y / 30}px)`,
+      });
+      $(".main_banner .float3").css({
+        transform: `translate(${x / 40}px,${y / 40}px)`,
+      });
+      $(".main_banner .float4").css({
+        transform: `translate(${x / 40}px,${y / 40}px)`,
+      });
     });
   }
 });

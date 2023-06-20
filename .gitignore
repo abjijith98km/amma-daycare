@@ -1,6 +1,6 @@
 # ignore node dependency directories
 node_modules/
-
+dist/
 # ignore build directories
 
 debug.log

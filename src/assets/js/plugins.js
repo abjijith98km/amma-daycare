@@ -1,7 +1,6 @@
 //=require plugins/bootstrap.min.js
 //=require plugins/slick.min.js
 //=require plugins/jquery.fancybox.js
-//=require plugins/aos.js
 
 // 3 plugins removed
 // 1. jquery.mask.js
