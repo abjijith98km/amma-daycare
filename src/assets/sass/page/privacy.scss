@@ -9,6 +9,9 @@
   @media (max-width: $mobile-lg) {
     padding-top: 80px;
   }
+  img{
+    margin-bottom: 40px
+  }
   h1 {
     @include font(45px, 1.5, 700, $color-black);
     margin-bottom: 30px;

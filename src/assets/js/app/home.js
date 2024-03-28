@@ -1,4 +1,16 @@
 $(document).ready(function () {
+  if (!localStorage.getItem('DEALSBANNER')) {
+    setTimeout(() => {
+      $('body').addClass('deals__popup__open')
+    }, 5000);
+  }
+  $('#close__deals__popup').click(function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+    $('body').removeClass('deals__popup__open')
+    localStorage.setItem('DEALSBANNER', true)
+  })
+
   let video = document.getElementById("fvideo");
   $(".video_playr .play_btn").click(function () {
     $("body").addClass("video_playback_open");
@@ -43,15 +55,30 @@ $(document).ready(function () {
     $("body").removeClass("nav_bar_open");
   });
 
-  $("header nav ul li a").click(function (e) {
-    e.preventDefault();
-    gotoId($(this).attr("href").split("#")[1]);
-    $("body").removeClass("nav_bar_open");
-  });
-  $("footer nav ul li a").click(function (e) {
-    e.preventDefault();
-
-    gotoId($(this).attr("href").split("#")[1]);
+  // $("header nav ul li a").click(function (e) {
+  //   let target = $(this).attr("href").split("#")[1];
+  //   if (target) {
+  //     e.preventDefault();
+  //     gotoId($(this).attr("href").split("#")[1]);
+  //   }
+  //   $("body").removeClass("nav_bar_open");
+  // });
+  // $("footer nav ul li a").click(function (e) {
+  //   let target = $(this).attr("href").split("#")[1];
+  //   if (target) {
+  //     e.preventDefault();
+  //     gotoId($(this).attr("href").split("#")[1]);
+  //   }
+  // });
+  $('.testimonial__slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    dots: true,
+    // adaptiveHeight:true,
   });
   $(".main_banner .scroll_down_btn").click(function (e) {
     e.preventDefault();

@@ -1,3 +1,5 @@
+/** @format */
+
 header {
   padding: 14px 0;
   position: fixed;
@@ -278,5 +280,41 @@ header {
     @media (max-width: $tablet-lg) {
       display: flex;
     }
+  }
+}
+
+.deals__popup {
+  position: fixed;
+  z-index: 120;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 560px;
+  padding: 0 15px;
+  height: auto;
+  display: none;
+  .close__popup {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+  }
+}
+.deals__popup__open {
+  overflow: hidden;
+  .bg_overlay_blade {
+    // @media (max-width: $tablet-lg) {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: none;
+    // }
+  }
+  .deals__popup {
+    display: block;
   }
 }

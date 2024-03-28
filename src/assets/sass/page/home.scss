@@ -1,3 +1,5 @@
+/** @format */
+
 .main_banner {
   width: 100%;
   height: 100vh;
@@ -406,8 +408,8 @@
     margin-bottom: 60px;
   }
   img {
-    width: 160px;
-    height: 99px;
+    width: 140px;
+    height: 90px;
     object-fit: contain;
     object-position: center;
     display: block;
@@ -429,12 +431,12 @@
     }
   }
   p {
-    @include font(16px, 1.5, 500, $color-black);
+    @include font(14px, 1.4, 500, $color-black);
     margin-bottom: 24px;
     text-align: center;
-    padding: 0 40px;
+    // padding: 0 40px;
     @media (max-width: $tablet-lg) {
-      padding: 0 10px;
+      // padding: 0 10px;
     }
     @media (max-width: $mobile-lg) {
       font-size: 14px;
@@ -489,7 +491,7 @@
       align-items: center;
       margin-bottom: 25px;
       h3 {
-        @include font(49px, 1.3, 600, $color-purple-heart);
+        @include font(40px, 1.3, 600, $color-purple-heart);
         margin-bottom: 0;
         font-family: $base-font-family;
         text-transform: capitalize;
@@ -645,7 +647,8 @@
               margin-top: 0px;
             }
           }
-          p ,label{
+          p,
+          label {
             display: inline-block;
             @include font(20px, 1.4, 400, #7c7c7c);
             @media (max-width: $mobile-lg) {
@@ -809,4 +812,96 @@
 }
 .service_popup_open {
   overflow: hidden;
+}
+.testimonials__section {
+  padding: 40px 0 120px;
+  .slick-dots {
+    li {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid $color-purple-heart;
+      &.slick-active {
+        background-color: $color-purple-heart;
+      }
+    }
+  }
+  .slick-arrow {
+    background-color: $color-purple-heart;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    @media (max-width: $mobile-lg) {
+      width: 40px;
+      height: 40px;
+    }
+    &::before {
+      @media (max-width: $mobile-lg) {
+        font-size: 18px;
+      }
+    }
+    &.slick-prev {
+      left: 0;
+      @media (max-width: $mobile-lg) {
+        left: -10px;
+      }
+    }
+    &.slick-next {
+      right: 0;
+      @media (max-width: $mobile-lg) {
+        right: -10px;
+      }
+    }
+  }
+}
+.testimony_slide {
+  h3 {
+    // font-size: px;
+    font-family: $base-font-family;
+    text-align: center;
+    line-height: 1.4;
+    color: $color-black;
+    max-width: 70%;
+    margin: 0 auto 40px;
+    @media (max-width: $tablet-lg) {
+      font-size: 28px;
+    }
+    @media (max-width: $mobile-lg) {
+      font-size: 22px;
+      max-width: 85%;
+      margin: 0 auto 30px;
+    }
+  }
+  .testimony_slide__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 15px;
+      object-fit: cover;
+    }
+    h5 {
+      font-size: 22px;
+      line-height: 1.2;
+      font-weight: 600;
+      font-family: $base-font-family;
+      text-transform: capitalize;
+      color: $color-purple-heart;
+      @media (max-width: $tablet-lg) {
+        font-size: 20px;
+      }
+      @media (max-width: $mobile-lg) {
+        font-size: 18px;
+      }
+    }
+  }
 }
